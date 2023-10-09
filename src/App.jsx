@@ -64,8 +64,8 @@ function App() {
 
   const UserDialogFooter = (
     <>
-      <Button label="Cancel" icon="pi pi-times" outlined onClick={hideDialog} />
-      <Button label="Save" icon="pi pi-check" onClick={updateUser} />
+      <Button label="Cancelar" icon="pi pi-times" outlined onClick={hideDialog} />
+      <Button label="Alterar" icon="pi pi-check" onClick={updateUser} />
     </>
   );
 
@@ -233,7 +233,6 @@ function App() {
             cols={20}
           />
         </div>
-        <Button onClick={() => updateUser()}>Alterar</Button>
       </Dialog>
     </div>
   );
