@@ -1,12 +1,12 @@
-import React, { useState,useEffect } from 'react'
+import { useState,useEffect } from 'react'
 import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
 import { Sidebar } from "primereact/sidebar";
 import { Button } from "primereact/button";
-import { Divider } from "primereact/divider";
 import { Dialog } from "primereact/dialog";
 import { InputText } from 'primereact/inputtext';
 import projectsApi from '../services/projects.api';
+import ToHome from '../Components/ToHome';
 
 
 export default function Projects() {
@@ -65,7 +65,6 @@ export default function Projects() {
     setProjectDialogVisible(true);
   };
   const updateProject = async () => {
-    debugger
     await projectsApi
       .put("" , {
         id: project.id,
@@ -82,7 +81,6 @@ export default function Projects() {
     
 
   const registerProject = async () => {
-    debugger
     await projectsApi
       .post("", {
         name:projectName,
@@ -130,6 +128,7 @@ export default function Projects() {
 
   return (
     <div className="card">
+      <ToHome />
           <div className="card flex justify-content-center">
           <Sidebar visible={visible} onHide={() => setVisible(false)}>
             <h3>Adicionar Projeto</h3>
