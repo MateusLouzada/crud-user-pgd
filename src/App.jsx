@@ -1,12 +1,12 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Users from "./Routes/Users";
-import Home from "./Routes/Home";
-import Comments from "./Routes/Comments"
-import Issues from "./Routes/Issues";
-import IssuesTypes from "./Routes/IssuesTypes";
-import Projects from "./Routes/Projects";
-import Stages from "./Routes/Stages";
+import Users from "./Pages/Users";
+import Home from "./Pages/Home";
+import Comments from "./Pages/Comments"
+import Issues from "./Pages/Issues";
+import IssuesTypes from "./Pages/IssuesTypes";
+import Projects from "./Pages/Projects";
+import Stages from "./Pages/Stages";
 
 function App() {
   return(

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
-    <div style={{ display: "flex", justifyContent: "space-around" }}>
+    <div style={{ display: "flex", justifyContent: "space-around", marginTop: '100px' }}>
       <div>
         <Link to="/comments">
           <Button>Comments</Button>
