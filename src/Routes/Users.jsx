@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
-import api from "../services/api";
 import { Sidebar } from "primereact/sidebar";
 import { Button } from "primereact/button";
 import { InputText } from "primereact/inputtext";
 import { Password } from "primereact/password";
 import { Divider } from "primereact/divider";
 import { Dialog } from "primereact/dialog";
+import api from "../services/users.api"
 
 export default function Users() {
  
@@ -28,7 +28,7 @@ export default function Users() {
   
     const updateUser = async () => {
       await api
-        .put("/api/users", {
+        .put("" , {
           id: user.id,
           name: nameChange ? nameChange : user.name,
           email: emailChange ? emailChange : user.email,
@@ -71,7 +71,7 @@ export default function Users() {
   
     const deleteUser = async (userdata) => {
       await api
-        .delete(`/api/users/${userdata.id}`)
+        .delete(`/${userdata.id}`)
         .then(() => {
           getUsers();
         })
@@ -101,7 +101,7 @@ export default function Users() {
   
     const getUsers = async () => {
       await api
-        .get("/api/users")
+        .get()
         .then((res) => {
           setUsers(res.data);
         })
@@ -114,7 +114,7 @@ export default function Users() {
   
     const registerUser = async () => {
       await api
-        .post("/api/users", {
+        .post("", {
           name: name,
           email: email,
           password: password,
