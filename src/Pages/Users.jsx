@@ -8,6 +8,7 @@ import { Password } from "primereact/password";
 import { Divider } from "primereact/divider";
 import { Dialog } from "primereact/dialog";
 import api from "../services/users.api"
+import ToHome from "../Components/ToHome";
 
 export default function Users() {
  
@@ -131,6 +132,7 @@ export default function Users() {
   
     return (
       <div className="card">
+        <ToHome />
         <div className="card flex justify-content-center">
           <Sidebar visible={visible} onHide={() => setVisible(false)}>
             <h3>Adicionar Usuário</h3>
