@@ -186,9 +186,9 @@ export default function Projects() {
         onHide={hideDialog}
       >
         
-          <div className="p-field">
-            <label htmlFor="name">Nome do Projeto</label>
-            <input
+          <div className="field">
+            <label htmlFor="name" className="font-bold">Nome do Projeto</label>
+            <InputText
               type="text"
               id="name"
               value={projectName}
@@ -198,9 +198,9 @@ export default function Projects() {
               cols={20}
             />
           </div>
-          <div className="p-field">
-            <label htmlFor="description">Descrição</label>
-            <input
+          <div className="field">
+            <label htmlFor="description" className="font-bold">Descrição</label>
+            <InputText
               type="text"
               id="description"
               value={description}
